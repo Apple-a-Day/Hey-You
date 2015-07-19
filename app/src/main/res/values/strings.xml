@@ -2,7 +2,16 @@
     <string name="app_name">Hey You!</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    //Buttons
+
+    <!-- Titles -->
+    <string name="title_activity_roommates">Roommates</string>
+    <string name="title_activity_card">Your Card</string>
+
+    <!-- Home Acvitity-->
     <string name="button_addCard">Add Card</string>
-    <string name="title_activity_roommates">roommates</string>
+
+    <!-- Roommates Activity-->
+
+    <!-- Card Activity-->
+    <string name="card_intro">hello card</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.hana.heyyou;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,10 +30,22 @@ public class roommates extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+        switch(item.getItemId()){
+            case R.id.action_me:
+                openHome();
+                return true;
+            case R.id.action_roommates:
+                return true;
+            default:
+                return true;
         }
+    }
 
-        return super.onOptionsItemSelected(item);
+    public void openHome(){
+        Intent intent = new Intent(this, home.class);
+        startActivity(intent);
     }
 }

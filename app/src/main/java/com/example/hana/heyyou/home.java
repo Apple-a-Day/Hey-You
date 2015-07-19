@@ -1,9 +1,11 @@
 package com.example.hana.heyyou;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class home extends ActionBarActivity {
@@ -30,13 +32,14 @@ public class home extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return super.onOptionsItemSelected(item);
+            return true;
+            //return super.onOptionsItemSelected(item);
         }
         switch(item.getItemId()){
             case R.id.action_me:    //return to home
                 //openMe();
                 return true;
-            case R.id.action_rommates:
+            case R.id.action_roommates:
                 openRoommates();
                 return true;
             default:
@@ -49,5 +52,14 @@ public class home extends ActionBarActivity {
 //    }
     public void openRoommates(){
         //open roommates panel
+        Intent intent = new Intent(this, roommates.class);
+        startActivity(intent);
+
+    }
+
+    public void openCardActivity(View view){
+        //open braintree activity
+        Intent intent = new Intent(this, card.class);
+        startActivity(intent);
     }
 }
