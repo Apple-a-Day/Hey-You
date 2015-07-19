@@ -18,17 +18,16 @@
         </activity>
         <activity
             android:name=".roommates"
-            android:label="@string/title_activity_roommates">
-
+            android:label="@string/title_activity_roommates" >
         </activity>
-        <!-- Child of .home-->
+        <!-- Child of .home -->
         <activity
             android:name=".card"
             android:label="@string/title_activity_card"
-            android:parentActivityName=".home">
+            android:parentActivityName=".home" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".home"/>
+                android:value=".home" />
         </activity>
     </application>
 
