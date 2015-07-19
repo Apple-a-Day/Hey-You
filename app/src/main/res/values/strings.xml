@@ -1,6 +1,23 @@
 <resources>
     <string name="app_name">Hey You!</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Titles -->
+    <string name="title_activity_roommates">Roommates</string>
+    <string name="title_activity_card">Your Card</string>
+
+    <!-- Home Acvitity-->
+    <string name="button_addCard">Add Card</string>
+
+    <!-- Roommates Activity-->
+    <string name="task">First Task</string>
+
+    <!-- Card Activity-->
+    <string name="card_intro">hello card</string>
+    <string name="title_activity_main">MainActivity</string>
+
+ <!--TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_task">Tasks</string>
 </resources>

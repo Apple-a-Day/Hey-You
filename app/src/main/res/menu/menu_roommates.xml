@@ -1,13 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".home">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hana.heyyou.roommates">
     <item android:id="@+id/action_me"
         android:title="me"
         android:icon="@drawable/ic_action_me"
         app:showAsAction="ifRoom"/>
-    <item android:id="@+id/action_roommates"
+    <item android:id="@+id/action_rommates"
         android:title="roommates"
         android:icon="@drawable/ic_action_roommates"
         app:showAsAction="ifRoom"/>
 </menu>
-
