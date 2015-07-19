@@ -174,9 +174,26 @@ public class home extends ActionBarActivity {
 * is selected.
 * */
     private void selectItemFromDrawer(int position) {
-        Fragment fragment = new CalenderFragment();
-
+        Fragment fragment;
         FragmentManager fragmentManager = getFragmentManager();
+
+
+        switch(position) {
+            default:
+            case 1:
+                fragment = new CalenderFragment();
+                break;
+            case 2:
+                fragment = new HistoryFragment();
+                break;
+            case 3:
+                fragment = new EventsFragment();
+                break;
+            case 4:
+                fragment = new PiggyFragment();
+                break;
+        }
+
         fragmentManager.beginTransaction()
                 .replace(R.id.mainContent, fragment)
                 .commit();
