@@ -38,9 +38,10 @@ public class home extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mNavItems.add(new NavItem("Calender", "Get rid of me", R.drawable.ic_action_calender));
-        mNavItems.add(new NavItem("History", "Me2", R.drawable.ic_action_history));
-        mNavItems.add(new NavItem("Events", "Me3", R.drawable.ic_action_events));
+        mNavItems.add(new NavItem("Calender", "Plan of what's happening", R.drawable.ic_action_calender));
+        mNavItems.add(new NavItem("History", "What happened", R.drawable.ic_action_history));
+        mNavItems.add(new NavItem("Events", "What's happening", R.drawable.ic_action_events));
+        mNavItems.add(new NavItem("Piggy Bank", "Where the money at", R.drawable.ic_action_piggy));
 
         // DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
