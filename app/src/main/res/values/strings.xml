@@ -11,11 +11,13 @@
     <string name="button_addCard">Add Card</string>
 
     <!-- Roommates Activity-->
+    <string name="task">First Task</string>
 
     <!-- Card Activity-->
     <string name="card_intro">hello card</string>
     <string name="title_activity_main">MainActivity</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+ <!--TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_task">Tasks</string>
 </resources>

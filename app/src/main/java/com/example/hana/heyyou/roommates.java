@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class roommates extends ActionBarActivity {
@@ -46,6 +47,11 @@ public class roommates extends ActionBarActivity {
 
     public void openHome(){
         Intent intent = new Intent(this, home.class);
+        startActivity(intent);
+    }
+
+    public void openTask(View view){
+        Intent intent = new Intent(this, task.class);
         startActivity(intent);
     }
 }

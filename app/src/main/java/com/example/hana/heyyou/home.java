@@ -20,8 +20,13 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.braintreepayments.api.dropin.BraintreePaymentActivity;
+import com.example.hana.heyyou.fragments.CalenderFragment;
+import com.example.hana.heyyou.fragments.EventsFragment;
+import com.example.hana.heyyou.fragments.HistoryFragment;
+import com.example.hana.heyyou.fragments.PiggyFragment;
 
+import java.util.ArrayList;
 
 public class home extends ActionBarActivity {
     private static String TAG = home.class.getSimpleName();
@@ -32,7 +37,7 @@ public class home extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
 
     ArrayList<NavItem> mNavItems = new ArrayList<NavItem>();
-
+    public static Person person = new Person();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,15 +79,8 @@ public class home extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-            //return super.onOptionsItemSelected(item);
-        }
         switch(item.getItemId()){
-            case R.id.action_me:    //return to home
-                //openMe();
+            case R.id.action_me:    //nothing happens as of yet
                 return true;
             case R.id.action_roommates:
                 openRoommates();
@@ -92,9 +90,6 @@ public class home extends ActionBarActivity {
         }
     }
 
-//    public void openMe(){
-//        //open my own panel
-//    }
     public void openRoommates(){
         //open roommates panel
         Intent intent = new Intent(this, roommates.class);
@@ -104,8 +99,12 @@ public class home extends ActionBarActivity {
 
     public void openCardActivity(View view){
         //open braintree activity
-        Intent intent = new Intent(this, card.class);
-        startActivity(intent);
+        int REQUEST_CODE = 0;
+        Intent intent = new Intent(this, BraintreePaymentActivity.class);
+        intent.putExtra(BraintreePaymentActivity.EXTRA_CLIENT_TOKEN, home.person.getClientToken());
+        // REQUEST_CODE is arbitrary and is only used within this activity.
+        startActivityForResult(intent, REQUEST_CODE);
+
     }
 
     class NavItem {
@@ -178,7 +177,7 @@ public class home extends ActionBarActivity {
         FragmentManager fragmentManager = getFragmentManager();
 
 
-        switch(position) {
+        switch (position) {
             default:
             case 1:
                 fragment = new CalenderFragment();
@@ -204,7 +203,4 @@ public class home extends ActionBarActivity {
         // Close the drawer
         mDrawerLayout.closeDrawer(mDrawerPane);
     }
-
-
-
 }
